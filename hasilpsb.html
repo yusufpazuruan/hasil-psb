@@ -432,6 +432,277 @@
 .-txt {
   color: #fff;
 }
+
+/* main class name */
+.gm-btn{
+    background: none;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 400;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+.gb-cutter::before,
+.gb-shutter::before,
+.gb-shutter::after,
+.gb-bordered::before,
+.gb-split::before
+{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/* shutter */
+.gb-shutter{
+    border: 2px solid var(--gb-51);
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 var(--gb-51);
+    font-size: 1.125rem;
+    font-weight: 700;
+    overflow: hidden;
+    color: var(--gb-51);
+}
+.gb-shutter::after, .gb-shutter::before{
+    top: 0;
+    left: 0;
+    width: 130%;
+    aspect-ratio: 1;
+    background: var(--gb-51);
+}
+.gb-shutter::after{
+    transform: translate(-100%,-80%) rotate(30deg);
+}
+.gb-shutter::before{
+    transform: translate(100%,30%) rotate(30deg);
+}
+.gb-shutter:hover::after{
+    transform: translate(-50%,-50%) rotate(30deg);
+}
+.gb-shutter:hover::before{
+    transform: translate(30%,-10%) rotate(30deg);
+}
+.gb-shutter:hover{
+    color: #eee;
+    box-shadow: 0 0 0;
+}
+
+
+/* ==== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    /* font-family: monospace; */
+}
+.container{
+    /* min-height: 90vh; */
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .box{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    padding-top: 80px;
+    margin: 1%;
+    border: 1px solid #242938;
+    border-radius: 10px;
+}
+.container .box p{
+    margin-top: 50px;
+    font-weight: 700;
+    border-top: 1px solid #24293877;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0;
+}
+.container .box p font{
+    background: #242938;
+    color: #bcdf89;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background: #324154;
+    color: #e2e8f0;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+}
+footer h4{
+    margin: 5px 0;
+}
+footer font{
+    color: #d13952;
+    color: #e6445f;
+    font-weight: 400;
+}
+footer a{
+    color: rgb(202, 202, 202);
+    color: inherit;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .box{
+        width: 100%;
+    }
+}
+/* main class name */
+.gm-btn{
+    background: none;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 400;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+.gb-cutter::before,
+.gb-shutter::before,
+.gb-shutter::after,
+.gb-bordered::before,
+.gb-split::before
+{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+/* cutter */
+
+.gb-cutter{
+    border: 2px solid var(--gb-51);
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 var(--gb-51);
+    font-size: 1.125rem;
+    font-weight: 700;
+    overflow: hidden;
+    color: var(--gb-51);
+}
+.gb-cutter::before{
+    top: 100%;
+    left: 0;
+    width: 150%;
+    aspect-ratio: 1;
+    background: var(--gb-51);
+    transform: translate(50%,0%) rotateZ(-45deg);
+}
+.gb-cutter:hover::before{
+    transform: translate(-20%,-60%) rotateZ(-45deg);
+}
+.gb-cutter:hover{
+    box-shadow: 0 0 0;
+    color: #eee;
+}
+
+/* shutter */
+.gb-shutter{
+    border: 2px solid var(--gb-51);
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 var(--gb-51);
+    font-size: 1.125rem;
+    font-weight: 700;
+    overflow: hidden;
+    color: var(--gb-51);
+}
+.gb-shutter::after, .gb-shutter::before{
+    top: 0;
+    left: 0;
+    width: 130%;
+    aspect-ratio: 1;
+    background: var(--gb-51);
+}
+.gb-shutter::after{
+    transform: translate(-100%,-80%) rotate(30deg);
+}
+.gb-shutter::before{
+    transform: translate(100%,30%) rotate(30deg);
+}
+.gb-shutter:hover::after{
+    transform: translate(-50%,-50%) rotate(30deg);
+}
+.gb-shutter:hover::before{
+    transform: translate(30%,-10%) rotate(30deg);
+}
+.gb-shutter:hover{
+    color: #eee;
+    box-shadow: 0 0 0;
+}
+
+/* bordered */
+.gb-bordered{
+    background: var(--gb-52);
+    color: #eee;
+    border-radius: 5px;
+}
+.gb-bordered::before{
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid var(--gb-52);
+    border-radius: 8px;
+}
+.gb-bordered:hover::before{
+    width: calc(100% + 4px);
+    height: calc(100% + 5px);
+}
+.gb-bordered:hover{
+    background: linear-gradient(to left, var(--gb-52),var(--gb-52d));
+}
+
+/* gb-split */
+.gb-split{
+    border: 1px solid #6a5acd;
+    color: #6a5acd;
+    border-radius: 5px;
+    font-size: 1.125rem;
+}
+.gb-split::before{
+    width: 100%;
+    height: 0;
+    background: #6a5acd;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gb-split:hover::before{
+    height: 100%;
+}
+.gb-split:hover{
+    color: #eee;
+}
+/* Root */
+
+:root{
+    --gb-51: #111827;
+    --gb-52: #2196f3;
+    --gb-52d: #0e71c1;
+}
     </style>
   </head>
   <body>
@@ -728,6 +999,7 @@
               <th>NAMA</th>
               <th>JK</th>
               <th>Ditempatkan di</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -736,1146 +1008,1337 @@
               <td>Abdan Nasyith Syafei</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>2</td>
               <td>Alvaro Pratama Bagaskara</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>3</td>
               <td>Attabik Musthafa Akyas IbnuFaozan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>4</td>
               <td>Farhan Naufal Aziz</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>5</td>
               <td>Fikri Muhammad Nadhim</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>6</td>
               <td>Hafidz Fahmi Aksan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>7</td>
               <td>Krista Progestian</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>8</td>
               <td>Mochammad Nazmi Azhar Solih</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>9</td>
               <td>Mohammad Rafa Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>10</td>
               <td>Muhamad Abdul Razak</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>11</td>
               <td>Muhammad Fadhol Firdaus</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>12</td>
               <td>Muhammad Fajar Fatihul Asror</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>13</td>
               <td>Muhammad Fauzi Yahya</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>14</td>
               <td>Muhammad Mikail Khairi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>15</td>
               <td>Nataka Abrizha Al Faqih</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>16</td>
               <td>Noer Riziq Al-Magribi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>17</td>
               <td>Raihan Salim</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>18</td>
               <td>Rasya Alifian Melsio</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>19</td>
               <td>Rifi Rizki Danipa</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>20</td>
               <td>Rosif Jahron</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>21</td>
               <td>Salman Faiz Al Ghifari</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>22</td>
               <td>Surya Nugraha Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>23</td>
               <td>M Falih Nasrulloh</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>24</td>
               <td>Evandika Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>25</td>
               <td>Faris Iqbal Marzuqi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>26</td>
               <td>Galang Juansah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>27</td>
               <td>Mahrus Imam Arkan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>28</td>
               <td>Mochamad Zidan Al Ghifari</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>29</td>
               <td>Muh. Faisal Adi Saputra</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>30</td>
               <td>Raza Shabri Siraj Qolbi Santoso</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>31</td>
               <td>Razan Abrar Mubarak</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>32</td>
               <td>Dwiki Azzami</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>33</td>
               <td>Haidar azra gusti jawazi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>34</td>
               <td>Wahyu Aditya</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>35</td>
               <td>Adams Romadhan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>36</td>
               <td>Afzal Jibran Utomo</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>37</td>
               <td>Ardel Annafis Ahmad</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>38</td>
               <td>Dafiq Anshorulloh</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>39</td>
               <td>Dede gunardi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>40</td>
               <td>Dzakkir Dzarwafi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>41</td>
               <td>Fahri Ramadhan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>42</td>
               <td>Ferry Juliansyah Rezki Maulana</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>43</td>
               <td>Muhammad Azami Abdul Malik</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>44</td>
               <td>Muhammad Azka Hairissa</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>45</td>
               <td>Muhammad Farhan Lazuardi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>46</td>
               <td>Muhammad Januar Arif</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>47</td>
               <td>Muhammad Rafif Maulana</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>48</td>
               <td>Sultan Muhammad Fatih</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>49</td>
               <td>Wildan Nurusyahrul Haz</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>50</td>
               <td>Zaldi Muhammad Nur</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>51</td>
               <td>Zelda hidayah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>52</td>
               <td>Adnan Fathoni</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>53</td>
               <td>Azhar Aslam</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>54</td>
               <td>Azmi Aulia Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>55</td>
               <td>Bagustiar Putra Ramadhan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>56</td>
               <td>Dimas Harry Setiawan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>57</td>
               <td>Faqih Abdullah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>58</td>
               <td>Fawaz Hirata Arifin</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>59</td>
               <td>Izz Zaini Athari</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>60</td>
               <td>Raihan Rafi'i Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>61</td>
               <td>Raihan Rizky Fadillah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>62</td>
               <td>Reifan Habibi Pratama</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>63</td>
               <td>Rizki Fardhani</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>64</td>
               <td>Sabilal Husein Syaepuddin</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>65</td>
               <td>Abdullah Asnawi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>66</td>
               <td>Alfi Kariadi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>67</td>
               <td>Dzaky Habib Abdillah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>68</td>
               <td>Faishal Imamul Hakim</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>69</td>
               <td>Ibnu Syaputro</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>70</td>
               <td>Ikramul Khudla</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>71</td>
               <td>Jumhana Rizki Harahap</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>72</td>
               <td>Kevin Maulana</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>73</td>
               <td>Muhammad Khalid Ramadhan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>74</td>
               <td>Muhammad Rizki Najmudin</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>75</td>
               <td>Zidhan Ar Raafi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>76</td>
               <td>Bagas Surya Saputra</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>77</td>
               <td>Hasan Maulana Ibrahim</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>78</td>
               <td>Muhammad Raihan Al Biruni</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>79</td>
               <td>Raza Nurdiansyah</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>80</td>
               <td>Reza RS</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>81</td>
               <td>Rizki Sofian</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>82</td>
               <td>Yafi Alphard</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>83</td>
               <td>Zahid Ikhlas</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>84</td>
               <td>Aditya Ramadhani</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>85</td>
               <td>Ahmad Hafidzulhaq</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>86</td>
               <td>Baihaqi Nuril Kamil</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>87</td>
               <td>Fajrul Huda TH</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>88</td>
               <td>Fathaan Naafir Ahmad Nawawi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>89</td>
               <td>Fathan Ashari Nurahmad firdaus</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>90</td>
               <td>Marvel Elsandi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>91</td>
               <td>Muhammad Alif Aulia Rahman</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>92</td>
               <td>Muhammad Azhar Fauzan</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>93</td>
               <td>Muhammad Azril Aulia</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>94</td>
               <td>Muhammad Fathir Alfian</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>95</td>
               <td>Muhammad Kayyis Muhyiddin</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>96</td>
               <td>Muhammad Khadaffi AlKhwaritzmi</td>
               <td>L</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>97</td>
               <td>Aluna Mumtaza Quranique</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>98</td>
               <td>Alya Nurshyfa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>99</td>
               <td>Dinan Fildjahi Aisyah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>100</td>
               <td>Dita Riski Ningrum</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>101</td>
               <td>Fadilla Zhefrina Zahra</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>102</td>
               <td>Halimatus Saadiyah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>103</td>
               <td>Khansa Putri Rahmania</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>104</td>
               <td>Miftakhus Sururoh</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>105</td>
               <td>Nadira Aufadania</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>106</td>
               <td>Naira Aulia Fatin</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>107</td>
               <td>Naswa Abdillah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>108</td>
               <td>Nazla Fathimatuzzahra</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>109</td>
               <td>Ozora Nikeisha Farras Widyasmara</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>110</td>
               <td>Rifa Shofiyatul Asyfa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>111</td>
               <td>Rita Puspita</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>112</td>
               <td>Vita Marissa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>113</td>
               <td>Alzena Azaria Suhadi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>114</td>
               <td>Alika Saliha Fajria</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>115</td>
               <td>Kanza Naila Salsabila</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>116</td>
               <td>Khairunnisa Zahra Aisy Arief</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>117</td>
               <td>Nadhifa Syafa Kamila</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>118</td>
               <td>Nadia Isnaini</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>119</td>
               <td>Naida Izzati Nurfani</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>120</td>
               <td>Naila Azzahra Boang Manalu</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>121</td>
               <td>Nesha Kalya Elijza</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>122</td>
               <td>Nur Syifa Salsa Billa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>123</td>
               <td>Shelyn Almaira Mirabelle</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>124</td>
               <td>Sri Rahmayani</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>125</td>
               <td>Zalfa Aliifah Nur'afiifah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>126</td>
               <td>Afifah Nurul Janah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>127</td>
               <td>A'Izna Maghfiroh Azji</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>128</td>
               <td>Alysha Zaskiya Maulida</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>129</td>
               <td>Alysya Anaya Puteri</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>130</td>
               <td>Anggun Syafira Heryanto</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>131</td>
               <td>Atikah Farah Dzakiyah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>132</td>
               <td>Aulia Hanna Yusup</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>133</td>
               <td>Ayu Purnawangi Citra Resmi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>134</td>
               <td>Bianca Maulidia Bahri</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>135</td>
               <td>Bilqiis Nawwal Permana</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>136</td>
               <td>Dalfa Hilyah Walidain Jauhari</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>137</td>
               <td>Keisha Nur Alisha</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>138</td>
               <td>Mellysha Noer Oetary</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>139</td>
               <td>Nabila Faliha Salsabila Tianlean</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>140</td>
               <td>Nada Lathifah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>141</td>
               <td>Nadia Shakilla Ashari</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>142</td>
               <td>Nafisah Fathi Rizqiyah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>143</td>
               <td>Narisha Mahjabin Yaquti</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>144</td>
               <td>Nazla Halimatus Sa'Diyah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>145</td>
               <td>Ollyf Arob Abiyyi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>146</td>
               <td>Rayyaa Siti Azarmi Fitriadi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>147</td>
               <td>Rizka Firliana Tendini</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>148</td>
               <td>Rumaisha Adawiyah Taufiq</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>149</td>
               <td>Satyakania Syafrial</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>150</td>
               <td>Sekar Bilqist Halimah Hanif</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>151</td>
               <td>Shafira Nur Azmi Ramadhan</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>152</td>
               <td>Shanna Dyandra S.</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>153</td>
               <td>Sofia Malique Chodami</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>154</td>
               <td>Sri Yuniwati</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>155</td>
               <td>Syahra Ramadani Syam</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>156</td>
               <td>Widdad Akmaliya</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>157</td>
               <td>Yasmin Nayyara Althafunnisa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>158</td>
               <td>Alviana Farkhatul Kamila</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>159</td>
               <td>Dewi Siti Fatimah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>160</td>
               <td>Keysa Azwa Labibah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>161</td>
               <td>Maulida Sahda Qonita</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>162</td>
               <td>Mutiara Hafidz</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>163</td>
               <td>Nafisa Indah Putria Santoso</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>164</td>
               <td>Shiren Nurshofa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>165</td>
               <td>Syafa Aulia Zahra Albanjari</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>166</td>
               <td>Syawalia Rizqi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>167</td>
               <td>Tsuraya Laiqa Lubena</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>168</td>
               <td>Tyas Arini Munjani</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>169</td>
               <td>Dian Noviyanti</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>170</td>
               <td>Naila Agsivia Az Zahra</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>171</td>
               <td>Anaya Aqila Mulya</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>172</td>
               <td>Anna Althafunnisa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>173</td>
               <td>Annora Kasturi Kuswoyo</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>174</td>
               <td>Dzikra Khalisah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>175</td>
               <td>Jihan Annisa Sabrina</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>176</td>
               <td>Kalila Fakhirah Nadine</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>177</td>
               <td>Khanza Nabila Rahma</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>178</td>
               <td>Natasya Gusti Putri</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>179</td>
               <td>Naysila Gusti Putri</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>180</td>
               <td>Rayyan Nurusyfa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>181</td>
               <td>Zahratull Izza</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>182</td>
               <td>Alia Zahra Nafisa</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>183</td>
               <td>Alya Rabiatul Mulyana</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>184</td>
               <td>Farhanny Nur Azizah Fadhilatus Sa'adah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>185</td>
               <td>Jihan Ladifa Asahy Aflah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>186</td>
               <td>Khayyira Nurania Rezak</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>187</td>
               <td>Maisun Najla Yumna</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>188</td>
               <td>Maisya Naila</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>189</td>
               <td>Najwa Fadilah</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>190</td>
               <td>Shafa Tasya Kamila</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
             <tr>
               <td>191</td>
               <td>Syifa Hanifah Rihhadatul 'Aisyi</td>
               <td>P</td>
               <td>SMAIQu Al Bahjah Pusat</td>
+              <td><button class="gm-btn gb-shutter"><a href="https://chat.whatsapp.com/LOr3TA139SIAbKGuQ3aBC4">Join Grup WA<a></button></td>
             </tr>
           </tbody>
         </table>
